@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IntegrandoMapas</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="str_catedral">Plaza de Armas Arequipa</string>
+    <string name="str_moasterio">Monasterio de Santa Catalina</string>
+    <string name="str_canoncolca">Cañon del Colca</string>
+    <string name="str_mirador">Mirador de Yanahuara</string>
+
+
+</resources>
