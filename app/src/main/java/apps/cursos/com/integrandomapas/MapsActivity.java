@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -45,27 +46,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+
         // Add a marker in Sydney and move the camera
 
         switch (idLugar){
             case 1:
                 LatLng catedral = new LatLng(-16.3988084,-71.5369056);
-                mMap.addMarker(new MarkerOptions().position(catedral).title(getString(R.string.str_catedral)));
+                mMap.addMarker(new MarkerOptions().position(catedral).title(getString(R.string.str_catedral)).
+                        icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_marker)));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(catedral,16));
                 break;
             case 2:
                 LatLng mirador = new LatLng(-16.3874803,-71.5417448);
-                mMap.addMarker(new MarkerOptions().position(mirador).title(getString(R.string.str_mirador)));
+                mMap.addMarker(new MarkerOptions().position(mirador).title(getString(R.string.str_mirador)).
+                        icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_marker)));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mirador,16));
                 break;
             case 3:
                 LatLng monasterio = new LatLng(-16.3952829,-71.5367908);
-                mMap.addMarker(new MarkerOptions().position(monasterio).title(getString(R.string.str_moasterio)));
+                mMap.addMarker(new MarkerOptions().position(monasterio).title(getString(R.string.str_moasterio)).
+                        icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_marker)));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(monasterio,16));
                 break;
             case 4:
                 LatLng colca = new LatLng(-15.6093293,-72.0896229);
-                mMap.addMarker(new MarkerOptions().position(colca).title(getString(R.string.str_canoncolca)));
+                mMap.addMarker(new MarkerOptions().position(colca).title(getString(R.string.str_canoncolca)).
+                        icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_marker)));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(colca,16));
                 break;
 
